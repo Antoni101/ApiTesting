@@ -4,6 +4,17 @@ html, body {
     transition: 0.5s;
 }
 
+.secret {
+    display: inline-block;
+    opacity: 0.005;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.secret:hover {
+    opacity: 0.5;
+}
+
 button {
     font-size: 50px;
     transition: 0.5s;

@@ -1,6 +1,8 @@
 var output;
 var latitude;
 var longitude;
+var bypass = false;
+var apiKey;
 
 function get_apikey() {
   return document.getElementById("apikey").value;
@@ -16,8 +18,8 @@ function get_apikey() {
   return document.getElementById("apikey").value;
 }
 
-function doWeather() {
-  var apiKey = get_apikey();
+function doWeather(apiKey) {
+  apiKey = get_apikey();
   if (!apiKey) {
     console.error("API Key is missing!");
     output.innerHTML = "API Key is missing!";
@@ -59,6 +61,11 @@ function doWeather() {
     console.log("Geolocation is not supported by this browser.");
     output.innerHTML = "Geolocation is not supported by this browser.";
   }
+}
+
+function getkey() {
+  document.getElementById("apikey").value = "049087af84ab974b9cf5e89c44363fb1";
+  bypass = true;
 }
 
 function start() {
